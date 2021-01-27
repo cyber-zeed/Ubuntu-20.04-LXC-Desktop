@@ -4,6 +4,7 @@ Ubuntu LXC Desktop for Proxmox
 Ubuntu proxmox LXC Container with desktop
 
 root password: F6h(W*Tsps=De?+k
+
 admin password:  F6h(W*Ts
 
 Part A: setting the template
