@@ -38,7 +38,9 @@ deb http://archive.canonical.com/ubuntu focal partner
 
 deb-src http://archive.canonical.com/ubuntu focal partner
 
-3) Install the desktop environment: during the install you will see a screen asking which desktop you want : select lighdm.
+3) Install the desktop environment: during the install you will see a screen asking which desktop you want : 
+
+select lighdm.
 
 sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
 
