@@ -39,18 +39,23 @@ deb http://archive.canonical.com/ubuntu focal partner
 deb-src http://archive.canonical.com/ubuntu focal partner
 
 3) Install the desktop environment: during the install you will see a screen asking which desktop you want : select lighdm.
+
 sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
 
 4) since we want to access the lxc through remote RDP, install XRDP
+
 sudo apt install xrdp
 
 5) Verify xrdp installed correctly and is running:
+
 sudo systemctl status xrdp
 
 6) once RDP is installed we need to add this code, so that desktop manager know what to use for display:
+
 update-alternatives --set x-session-manager /usr/bin/xfce4-session
 
 7) install Firefox browser or any other software you like to have in your templates (Terminal/chrome browser, for example)
+
 sudo apt-get install firefox -y
 
 8) crate a backup of the new created LXC as as GZIP. first, turn off the lxc container and then do the backup from Proxmox GUI.
@@ -64,7 +69,9 @@ cp backup-folder-file template-folder/new-name.tar.gz
 Part B: getting the sound to work:
 
 1) get latest download link of xrd-installer-1.2 from this website:
+
 cd opt
+
 wget http://c-nergy.be/downloads/xRDP/xrdp-installer-1.2.zip
 
 unzip xrdp*
@@ -72,6 +79,7 @@ unzip xrdp*
 chmod +x xrdp-installer-1.2.sh
 
 2) create a new user if you don't already have one:
+
 adduser admin
 
 usermod -aG sudo admin
@@ -84,6 +92,7 @@ su admin
  reboot
 
 4) After rebooting the container, i was getting Dummy output in the Volume control and no sound output. To fix the issue restart pulseaudio server in the container by running the following command:
+
 pulseaudio -k
 
 After pulseaudio is restarted, the sound should start to work with xrdp sink appearing in the volume control.
@@ -91,6 +100,7 @@ After pulseaudio is restarted, the sound should start to work with xrdp sink app
 Part C:
 You can use/try a different desktop environment than xfce4, after all this is the beauty of LXC. before turning the new container to a template try different desktop environments. once you make your choice, remove/delete old desktop then set container as template in order to keep it to a small size.
 for UBUNTU-MATE desktop use the following:
+
 sudo apt install lightdm ubuntu-mate-core ubuntu-mate-desktop -y
 
 sudo update-alternatives --set x-session-manager /usr/bin/mate-session
