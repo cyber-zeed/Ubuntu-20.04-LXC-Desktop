@@ -3,12 +3,15 @@ Ubuntu LXC Desktop for Proxmox
 
 Ubuntu proxmox LXC Container with desktop
 
+Update: Container for proxmox installed available
+https://drive.google.com/file/d/1iwZ9FETJVwcplVrBoqL9v444J82kMGJh/view?usp=sharing
+
 root password: F6h(W*Tsps=De?+k
 
 admin password:  F6h(W*Ts
 
 Part A: setting the template
-1) create a template for ubuntu, give it 4G of storage, 2 cpu (can change to what you want), specify the ip you want (ex: 192.168.1.20/24), provide a gateway.
+1) create a template for ubuntu, give it 100G of storage, 2 or 4 cpu (can change to what you want), specify the ip you want (ex: 192.168.1.10/24), provide a gateway.
 2) once you start the new lxc. Log in as root and edit Source.list:
 
 sudo nano /etc/apt/sources.list
