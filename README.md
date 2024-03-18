@@ -1,3 +1,7 @@
+##Updated to 22.04 - This vesion is deprecated!###
+Follow the link!
+https://github.com/cyber-zeed/Ubuntu-22.04-LXC-Desktop
+
 # Ubuntu-20.04-LXC-Desktop
 Ubuntu LXC Desktop for Proxmox
 
