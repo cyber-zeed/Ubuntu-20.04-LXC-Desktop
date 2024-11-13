@@ -9,7 +9,7 @@ Ubuntu proxmox LXC Container with desktop
 
 Update: Container for proxmox installed available
 
-https://drive.google.com/file/d/1iwZ9FETJVwcplVrBoqL9v444J82kMGJh/view?usp=sharing
+https://drive.google.com/drive/folders/1lDx5OmtHWLwvXSkp9K0jEU0Wsd_tvuVp?usp=sharing
 
 root password: F6h(W*Tsps=De?+k
 
